@@ -18,7 +18,7 @@ class Normalization:
             dates = dates.loc[2:,["Unnamed: 2","Y","La","Ce","Pr","Nd","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu"]]
 
             #按球粒陨石计算稀土配分模式
-            date_lable = dates.loc[2:,"Unnamed: 2"]
+            date_label = dates.loc[2:,"Unnamed: 2"]
             date_La = dates.loc[2:,"La"]/38.2
             date_Ce = dates.loc[2:,"Ce"]/79.6
             date_Pr = dates.loc[2:,"Pr"]/8.83
@@ -37,7 +37,7 @@ class Normalization:
             #构建新的DateFrame
             date_XT = pd.concat(
                 [
-                    date_lable,
+                    date_label,
                     date_La,
                     date_Ce,
                     date_Pr,
