@@ -1,16 +1,9 @@
-from tkinter import *
+import sys
+from PyQt5.QtWidgets import QApplication
 from GUI import Main_GUI
+
 if __name__ == '__main__':
-    root = Tk()
-
-    screeenwidth = root.winfo_screenwidth()
-    screenheight = root.winfo_screenheight()
-    # w = 1200
-    # h = 800
-    # x = (screeenwidth-w)/2
-    # y = (screenheight-h)/2 
-    # root.geometry('%dx%d+%d+%d' % (w, h, x, y))
-
-    # root.title('Geochemistry Analysis: Major and Trace')
-    app = Main_GUI(master=root)
-    root.mainloop()
+    app = QApplication(sys.argv)
+    gui = Main_GUI()
+    gui.show()
+    sys.exit(app.exec_())
